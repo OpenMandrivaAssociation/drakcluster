@@ -1,6 +1,6 @@
 %define name drakcluster
 %define version 1.4
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Graphic interface tool to setup server cluster
 Name: %{name}
@@ -9,7 +9,7 @@ Release: %{release}
 #Source0: %{name}-%{version}.tar.bz2
 Source0: %{name}-devel.tar.bz2
 License: 	GPL
-Group: 		System/Deploiment
+Group: 		System/Cluster
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Prefix: 	%{_prefix}
 URL:		http://www.mandriva.com
