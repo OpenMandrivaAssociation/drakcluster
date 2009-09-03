@@ -1,6 +1,6 @@
 %define name drakcluster
 %define version 1.4
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary: Graphic interface tool to setup server cluster
 Name: %{name}
