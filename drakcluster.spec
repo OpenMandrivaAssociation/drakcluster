@@ -1,6 +1,6 @@
 %define name drakcluster
-%define version 1.4
-%define release %mkrel 8
+%define version 1.5
+%define release %mkrel 1
 
 Summary: Graphic interface tool to setup server cluster
 Name: %{name}
@@ -14,7 +14,7 @@ BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Prefix: 	%{_prefix}
 URL:		http://www.mandriva.com
 buildarch:	noarch
-requires:	perl-GTK2, clusterscripts-server => 1.9
+requires:	perl-GTK2, clusterscripts-server => 3.0, xli, xterm, xpdf
 # drakxtools2,
 
 %description
@@ -45,4 +45,4 @@ rm -fr %{buildroot}
 %attr(755,root,root) %{_bindir}/cluster_applet.pl
 %attr(755,root,root) %{_sbindir}/drakka
 
-
+%changelog
