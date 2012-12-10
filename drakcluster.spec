@@ -1,42 +1,34 @@
-%define name drakcluster
-%define version 1.6
-%define release %mkrel 3
-
-Summary: Graphic interface tool to setup server cluster
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Summary:	Graphic interface tool to setup server cluster
+Name:		drakcluster
+Version:	1.6
+Release:	4
 #Source0: %{name}-%{version}.tar.bz2
-Source0: %{name}-devel.tar.bz2
-License: 	GPL
-Group: 		System/Cluster
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
-Prefix: 	%{_prefix}
+Source0:	%{name}-devel.tar.bz2
+License:	GPL
+Group:		System/Cluster
 URL:		http://www.mandriva.com
-buildarch:	noarch
-requires:	perl-GTK2, clusterscripts-server => 3.0, xli, xterm, xpdf, drakxtools
-# drakxtools2,
+BuildArch:	noarch
+Requires:	perl-Gtk2
+Requires:	clusterscripts-server
+Requires:	xli
+Requires:	xterm
+Requires:	xpdf
+Requires:	drakxtools
 
 %description
 Graphic interface to admin and setup the servr cluster.
 
 %prep
-rm -rf ${buildroot}
 %setup -q -n %{name}-devel
 
 %build
 make build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make installd DESTDIR=$RPM_BUILD_ROOT
+make installd DESTDIR=%{buildroot}
 %find_lang drakcluster
 
-%clean
-rm -fr %{buildroot}
-
 %files -f drakcluster.lang
-%defattr(-,root,root)
 %{_datadir}/pixmaps/cluster/*
 %{perl_vendorlib}/drakcluster/*
 %{perl_vendorlib}/interface_cluster.pm
@@ -45,4 +37,3 @@ rm -fr %{buildroot}
 %attr(755,root,root) %{_bindir}/cluster_applet.pl
 %attr(755,root,root) %{_sbindir}/drakka
 
-%changelog
