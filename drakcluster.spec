@@ -1,7 +1,7 @@
 Summary:	Graphic interface tool to setup server cluster
 Name:		drakcluster
 Version:	1.6
-Release:	4
+Release:	5
 #Source0: %{name}-%{version}.tar.bz2
 Source0:	%{name}-devel.tar.bz2
 License:	GPL
