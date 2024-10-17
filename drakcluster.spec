@@ -6,7 +6,7 @@ Release:	5
 Source0:	%{name}-devel.tar.bz2
 License:	GPL
 Group:		System/Cluster
-URL:		http://www.mandriva.com
+URL:		https://www.mandriva.com
 BuildArch:	noarch
 Requires:	perl-Gtk2
 Requires:	clusterscripts-server
